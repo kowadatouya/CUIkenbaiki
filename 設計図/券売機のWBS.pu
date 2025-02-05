@@ -1,0 +1,19 @@
+@startwbs 券売機を作るWBS
+title 券売機を作るWBS
+
+* CUI券売機を作る
+**[#pink] 設計図を作る
++++[#SkyBlue] WBSを作る
++++[#SkyBlue] 依存関係図を作る
++++[#SkyBlue] クラス図を作る
++++[#SkyBlue] シーケンス図を作る
+**[#pink] プログラムを作る
++++[#SkyBlue] 入力側を作る
++++[#SkyBlue] 管理側を作る
++++[#SkyBlue] 入力側のメインを作る
++++[#SkyBlue] 管理側のメインを作る
+**[#pink] テストケースを作る
++++[#SkyBlue] 入力側のテスト
++++[#SkyBlue] 管理側のテスト
++++[#SkyBlue] 入力側のメインのテスト
++++[#SkyBlue] 管理側のメインのテスト
