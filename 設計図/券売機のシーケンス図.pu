@@ -1,0 +1,33 @@
+@startuml 複合フラグメント
+hide footbox
+
+skinparam style strictuml /' 厳密なUMLに準拠する '/
+Actor 顧客 as user
+participant ":入力画面" as input
+participant ":券売機コントローラ" as control
+activate user
+user -> input : 権限入力(Enter)
+activate  input
+input -> control : 権限確認(Enter)
+activate  control
+input <- control : メニューや金額の表示()
+  loop 2,商品数
+  input <- user : 商品番号の入力(1)
+  input -> control : 商品番号の入力(1)
+  input <- user : 商品番号の入力(4)
+  input -> control : 商品番号の入力(4)
+  input <- user : 支払い画面移動入力(ｃ)
+  input -> control : 支払い画面移動入力(ｃ)
+  end loop
+input <- control : 合計の表示(1150)
+user -> input : 現金の投入(2000)
+input -> control : 投入額の確認()
+input <- control : おつり()
+input <- control : シミュレータ続行確認()
+user -> input : 終了入力()
+input -> control : 処理終了
+deactivate  control
+
+deactivate input
+
+@enduml
