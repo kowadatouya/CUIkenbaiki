@@ -1,0 +1,29 @@
+@startuml CUI券売機シミュレータ
+start
+fork
+    : 設計図の作成;
+fork again
+    : WBSを作る;
+    : シーケンス図を作る;
+fork again
+    : 依存関係図を作る;
+    : クラス図を作る;
+end fork
+fork
+    : CUI発券機シミュレータを作る;
+fork again
+    : 入力側を作る;
+    : 管理側を作る;
+    : 入力側のメインを作る;
+    : 管理側のメインを作る;
+end fork
+fork
+    : 成果物をテストする;
+fork again
+    : 入力側のテスト;
+    : 管理側のテスト;
+    : 入力側のメインのテスト;
+    : 管理側のメインのテスト;
+end fork
+stop
+@enduml

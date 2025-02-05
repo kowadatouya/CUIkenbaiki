@@ -1,0 +1,56 @@
+@startuml クラス図
+left to right direction
+skinparam classAttributeIconSize 0
+hide circle
+
+class 券売機 {
+- 機能
+- 値段
+- 画面
+}
+
+class 管理者 {
+- 技術
+}
+
+class 利用者 {
+- 発券番号
+- 代金
+}
+
+class 設計図 {
+- WBS
+- 依存関係図
+- クラス図
+- シーケンス図
+}
+
+class 商品 {
+- ラーメン
+}
+
+管理者 "1..*"-->"*" 券売機 : 管理者がシステムを動作させる >
+note top of 管理者
+管理者が券売機の管理をします
+end note
+
+利用者 "*"-->"*" 券売機 : 利用者が券売機を利用する >
+note bottom of 利用者
+利用者が券売機を利用します
+end note
+
+設計図 "1..*"--"*" 券売機 : 設計図をもとにシステムを構築する
+note top of 設計図
+設計図がなければ券売機は成り立ちません
+end note
+
+管理者 "1..*"-->"1..*" 設計図 : 管理者が設計図をもとに設計する >
+note bottom of 管理者
+設計図がなければ管理者は設計できません
+end note
+
+商品 "*"-->"*" 利用者 : 利用者の購入された商品を提供する >
+note bottom of 商品
+利用者は商品を購入できます
+end note
+@enduml
