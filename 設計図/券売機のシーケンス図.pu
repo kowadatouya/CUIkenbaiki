@@ -1,7 +1,7 @@
-@startuml 複合フラグメント
+@startuml シーケンス図
 hide footbox
 
-skinparam style strictuml /' 厳密なUMLに準拠する '/
+skinparam style strictuml
 Actor 顧客 as user
 participant ":入力画面" as input
 participant ":券売機コントローラ" as control
