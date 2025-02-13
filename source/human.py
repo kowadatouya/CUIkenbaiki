@@ -1,7 +1,7 @@
 import keyboard
 import os
 import time
-from .admin import Admin
+from source.admin import Admin
 class Human:
     def __init__(self, branch1=1000, branch2=780, branch3=880, branch4=150):
         self.current_state = "human"
