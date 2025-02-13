@@ -1,5 +1,5 @@
 import keyboard
-from admin import Admin
+from .admin import Admin
 
 class Human:
     def __init__(self):
@@ -23,7 +23,7 @@ class Human:
         print("商品      金額")
         print("=======================")
         for key, item in self.items.items():
-            print(f"{key}.{item["name"]} {item["price"]}円")
+            print(f"{key}.{item['name']} {item['price']}円")
         print("———")
         while True:
             human_select = input("購入する商品番号(支払いに進む場合はc)>")
